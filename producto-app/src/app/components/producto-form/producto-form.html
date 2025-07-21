@@ -1,0 +1,5 @@
+<form (ngSubmit)="guardar()">
+  <input [(ngModel)]="producto.nombre" name="nombre" placeholder="Nombre" required />
+  <input [(ngModel)]="producto.precio" name="precio" type="number" placeholder="Precio" required />
+  <button type="submit">Guardar</button>
+</form>

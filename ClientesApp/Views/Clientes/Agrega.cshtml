@@ -1,0 +1,9 @@
+@model AppCliente.Models.Cliente
+
+<h2>Agregar Cliente</h2>
+
+<form asp-action="Agrega" method="post">
+    <p>Nombre: <input asp-for="Nombre" /></p>
+    <p>Email: <input asp-for="Email" /></p>
+    <p><button type="submit">Guardar</button></p>
+</form>

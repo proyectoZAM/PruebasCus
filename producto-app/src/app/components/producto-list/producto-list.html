@@ -1,0 +1,18 @@
+<app-producto-form [producto]="productoEdit || {id: 0, nombre: '', precio: 0}" (onGuardar)="guardarProducto($event)"></app-producto-form>
+
+<table>
+  <thead>
+    <tr><th>ID</th><th>Nombre</th><th>Precio</th><th>Acciones</th></tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let p of productos">
+      <td>{{p.id}}</td>
+      <td>{{p.nombre}}</td>
+      <td>{{p.precio}}</td>
+      <td>
+        <button (click)="editarProducto(p)">Editar</button>
+        <button (click)="eliminarProducto(p.id)">Eliminar</button>
+      </td>
+    </tr>
+  </tbody>
+</table>
